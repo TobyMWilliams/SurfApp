@@ -1,11 +1,10 @@
 """
 Beach facing direction calculator
 ---------------------------------
-Given two endpoints of a beach (lat/lon), this script calculates the 
+Given two endpoints of a beach (lat/lon), this file calculates the 
 perpendicular direction (the "facing" direction, i.e., toward the sea).
 
-Run:
-    python beach_facing.py
+
 """
 
 import math
