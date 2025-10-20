@@ -1,1 +1,1 @@
-"# my project" 
+In this project, my aim is to create an accurate, reliable surf forecast for Rest Bay beach in Porthcawl 
