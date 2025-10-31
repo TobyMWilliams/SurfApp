@@ -8,6 +8,7 @@ perpendicular direction (the "facing" direction, i.e., toward the sea).
 """
 
 import math
+import REST_BAY
 
 # method to normalize degrees to [0, 360)
 def normalize(deg):
@@ -28,13 +29,13 @@ def beach_facing(lat1, lon1, lat2, lon2):
 
 # Example usage
 if __name__ == "__main__":
-    print("Enter coordinates for the two beach endpoints:")
-    lat1 = float(input("Latitude 1: "))
-    lon1 = float(input("Longitude 1: "))
-    lat2 = float(input("Latitude 2: "))
-    lon2 = float(input("Longitude 2: "))
+    print("Beach Facing Direction for Rest Bay Beach:")
+    lat1 = REST_BAY.REST_BAY_COORDINATES["TL_latitude"]
+    lon1 = REST_BAY.REST_BAY_COORDINATES["TL_longitude"]
+    lat2 = REST_BAY.REST_BAY_COORDINATES["BR_latitude"]
+    lon2 = REST_BAY.REST_BAY_COORDINATES["BR_longitude"]
     beach_span = beach_facing(lat1, lon1, lat2, lon2)
-    print(f"Beach shoreline bearing from point 1 to point 2: {beach_span:.2f}°")
+    # print(f"Beach shoreline bearing from point 1 to point 2: {beach_span:.2f}°")
     # sea_side = input("Is the sea to the 'left' or 'right' when going from point 1 to 2? [right]: ") or "right"
     facing_direction = beach_span + 90  # assuming sea is to the right
     facing_direction = normalize(facing_direction)
